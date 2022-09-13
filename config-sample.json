@@ -1,0 +1,10 @@
+{
+    "sleep_per_step" : 2,
+    "timeframe" : 60,
+    "maxlag_refresh" : 60,
+    "top_user_num" : 10,
+    "username" : "",
+    "email" : "",
+    "rc_stream_source" : "https://stream.wikimedia.org/v2/stream/recentchange",
+    "wikidata_api_endpoint" : "https://www.wikidata.org/w/api.php"
+}
