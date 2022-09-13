@@ -10,6 +10,6 @@ A full list of config variables in `./config.json`:
 * `timeframe` – integer; time period for which the edit rate is computed (usually 60 sec)
 * `maxlag_refresh` – integer; update frequency for maxlag updates in seconds; do not use values lower than 60 sec
 * `username` – string; your Wikimedia username; will be exposed to the Wikidata API
-* `email` – string; your Wikimedia username; will be exposed to the Wikidata API
+* `email` – string; your email address; will be exposed to the Wikidata API
 * `rc_stream_source` – string; see docs at [wikitechwiki](https://wikitech.wikimedia.org/wiki/Event_Platform/EventStreams) for details
 * `wikidata_api_endpoint` – string; value "https://www.wikidata.org/w/api.php" will likely never change
