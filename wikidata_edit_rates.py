@@ -2,7 +2,7 @@
 #
 # creator: https://www.wikidata.org/wiki/User:MisterSynergy
 # license: MIT License
-# version: 2022-09-13
+# version: 2026-04-05
 # status : beta; might crash, or contain bugs
 # Python version: 3.9
 #
