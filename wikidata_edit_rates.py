@@ -94,7 +94,7 @@ class EventManager:
 
     def _add_event(self, change:Dict[str, Any]) -> None:
         new_event = pd.DataFrame(
-            data={  
+            data={
                 'timestamp' : [ int(change.get('timestamp', 0)) ],
                 'ts' : [ pd.to_datetime(int(change.get('timestamp', 0)), unit='s') ], # not in use at the moment
                 'user' : [ change.get('user', '') ],
@@ -206,7 +206,9 @@ class EventStream:
         self.stream_is_on = True
 
         try:
-            for event in EventSource(CONFIG.rc_stream_source):
+            for event in EventSource(CONFIG.rc_stream_source, headers={ \
+                    'User-Agent' : f'{requests.utils.default_headers()["User-Agent"]}' \
+                    f' (Wikidata bot by User:{CONFIG.username}; mailto:{CONFIG.email})'}):
                 self.dispatch_target.process_event(event)
         except HTTPError as exception:
             print(exception)
